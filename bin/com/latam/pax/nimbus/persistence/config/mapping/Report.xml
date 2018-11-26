@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.latam.pax.nimbus.persistence.services.ReportMapper">
+	<resultMap id="DetailQuestionMap" type="com.latam.pax.nimbus.domain.Question">
+		<result property="questionId" column="ASPGAD_CDG" />
+		<result property="questionSpa" column="ASPGAD_DSC_ES" />
+		<result property="questionPor" column="ASPGAD_DSC_PT" />
+		<result property="typeAirplane" column="TPOGAD_DSC" />
+		<result property="reportDoc" column="ASPGAD_RPT" />
+		<result property="typeQuestion" column="TIPPRE_DESC" />
+	</resultMap>
+	
+	<select id="getQuestion" resultMap="DetailQuestionMap" >
+	<![CDATA[
+	 SELECT DISTINCT
+ E.RPTGAD_SEQ_CDG, 
+ E.TPOGAD_CDG, 
+ E.ASPGAD_CDG,
+ D.ASPGAD_DSC_ES,
+ D.ASPGAD_DSC_PT,
+ E.PUNTCN_CDG,
+ D.SECCIO_CDG,
+ D.FASGCP_CDG,
+ D.TIPPRE_ID,
+ N.PUNTCN_VALOR
+ FROM 
+ TRMGAD L 
+ JOIN EVLCMP E ON E.RPTGAD_SEQ_CDG = L.RPTGAD_SEQ_CDG
+ JOIN PUNTCN N ON E.PUNTCN_CDG     = N.PUNTCN_CDG
+ JOIN ASPGAD D ON E.ASPGAD_CDG     = D.ASPGAD_CDG
+ INNER JOIN RPTGAD P ON P.RPTGAD_SEQ_CDG = L.RPTGAD_SEQ_CDG  
+ WHERE
+ RPTGAD_RPT = 'GCP'
+ AND P.TRIPLT_BP_TC =#{param1:VARCHAR}
+	]]>
+	</select>
+
+	<resultMap id="DetailReportMap" type="com.latam.pax.nimbus.domain.Report">
+		<result property="reportId" column="RPTGAD_SEQ_CDG" />
+		<result property="operator" column="LNAR_CDG_IATA" />
+		<result property="fligthCode" column="CDVL_NMR" />
+		<result property="fligthDate" column="VLOS_FCH" />
+		<result property="airportOriginCode" column="ARPRTO_CDG_IATA_ATO_ORI" />
+		<result property="airportDestinationCode" column="ARPRTO_CDG_IATA_ATO_DES" />
+		<result property="jsbName" column="JSB_NAME" />
+		<result property="jsbBp" column="JSB_BP"/>
+	</resultMap>
+	
+	<select id="getReport" resultMap="DetailReportMap" >
+	<![CDATA[
+		SELECT 
+		H.RPTGAD_SEQ_CDG,
+		G.LNAR_CDG_IATA,
+		G.CDVL_NMR,
+	  	G.ARPRTO_CDG_IATA_ATO_ORI,
+		G.ARPRTO_CDG_IATA_ATO_DES,
+		G.VLOS_FCH,
+		H.RPTGAD_MAIL,
+	    (SELECT TRIPLT_NMB_TRIP FROM HGSAB_TRIPULANTES WHERE TRIPLT_BP = G.TRIPLT_BP_JSB) AS JSB_NAME,
+		(SELECT TRIPLT_BP FROM HGSAB_TRIPULANTES WHERE TRIPLT_BP = G.TRIPLT_BP_JSB) AS JSB_BP
+	  	FROM TRMASG G
+	  	INNER JOIN TRMGAD L ON G.TRMASG_SEQ_CDG = L.TRMASG_SEQ_CDG
+	 	INNER JOIN RPTGAD H ON H.RPTGAD_SEQ_CDG = L.RPTGAD_SEQ_CDG WHERE TO_DATE(RPTGAD_FCH_CREACION,'DD/MM/YY') = (SELECT TO_DATE
+	  	(SYSDATE - 4, 'DD/MM/YY') "NOW"
+	  	FROM DUAL) AND RPTGAD_RPT = 'GCP'
+	]]>
+	</select>
+	<resultMap id="DetailResponseGcp"
+		type="com.latam.pax.nimbus.domain.DetailResponseGCP">
+		<result property="names" column="TRIPLT_NMB_TRIP" />
+		<result property="lastName" column="TRIPLT_APE_TRIP" />
+		<result property="nameTc" column="NAME_TC" />
+		<result property="lastNameTc" column="LASTNAME_TC" />
+		<result property="position" column="RPTGAD_ACTIVE_RANK_TC" />
+	    <result property="bp" column="TRIPLT_BP" />
+		<result property="operator" column="LNAR_CDG_IATA" />
+		<result property="numFlight" column="CDVL_NMR" />
+		<result property="strength" column="RPTGAD_DSC_FORTALEZA" />
+		<result property="improvement" column="RPTGAD_DSC_MEJORA" />
+		<result property="comments" column="RPTGAD_OBS_TC" />
+		<result property="firmJsb" column="RPTGAD_IMG_FIRMAJSB" />
+		<result property="firmTc" column="RPTGAD_RUTAIMG_FIRMA_TC" />
+	</resultMap>
+	<select id="getGCP" resultMap="DetailResponseGcp" >
+	<![CDATA[
+	    SELECT DISTINCT
+  G.LNAR_CDG_IATA,
+  G.CDVL_NMR,
+  A.TRIPLT_NMB_TRIP,
+  A.TRIPLT_BP,
+  A.TRIPLT_APE_TRIP,
+  (SELECT 
+  M.TRIPLT_NMB_TRIP
+  FROM TRIPLT M
+  WHERE M.TRIPLT_BP = P.TRIPLT_BP_TC) AS NAME_TC,
+  (SELECT 
+  A.TRIPLT_APE_TRIP 
+  FROM
+  TRIPLT A
+  WHERE A.TRIPLT_BP = P.TRIPLT_BP_TC)AS LASTNAME_TC,
+  P.RPTGAD_ACTIVE_RANK_TC,
+  P.RPTGAD_RUTAIMG_FIRMAJSB,
+  P.RPTGAD_RUTAIMG_FIRMA_TC,
+  P.RPTGAD_DSC_MEJORA,
+  P.RPTGAD_DSC_FORTALEZA,
+  P.TRIPLT_BP_TC,
+  P.RPTGAD_OBS_TC
+  FROM TRMASG G
+  JOIN TRMGAD L ON G.TRMASG_SEQ_CDG = L.TRMASG_SEQ_CDG
+  JOIN TRIPLT A  ON A.TRIPLT_BP = #{param2:VARCHAR}
+  INNER JOIN RPTGAD P ON P.RPTGAD_SEQ_CDG = L.RPTGAD_SEQ_CDG 
+  AND P.RPTGAD_SEQ_CDG = L.RPTGAD_SEQ_CDG 
+  WHERE TO_DATE(RPTGAD_FCH_CREACION,'DD/MM/YY') = (SELECT TO_DATE
+  (SYSDATE, 'DD/MM/YY') NOW
+  FROM DUAL)AND RPTGAD_RPT = 'GCP'
+  AND G.LNAR_CDG_IATA =#{param3:VARCHAR}
+  AND G.CDVL_NMR=#{param1:VARCHAR}
+	]]>
+	</select>
+
+
+	<resultMap 
+		id="ReportGCP4Detail"
+		type="com.latam.pax.nimbus.domain.ResultGCP4JSB">
+		<id property="id" column="RPTGAD_SEQ_CDG"/>	
+		<result property="flight.airlineCode" column="LNAR_CDG_IATA"/>	
+		<result property="flight.flightNumber" column="CDVL_NMR"/>	
+		<result property="appraiser.bp" column="TRIPLT_BP_JSB"/>	
+		<result property="appraisee.bp" column="TRIPLT_BP_TC"/>
+		<result property="appraiseeFile.filePath" column="RPTGAD_RUTAIMG_FIRMA_TC"/>
+		<result property="appraiseeFile.fileName" column="RPTGAD_IMG_FIRMATC"/>
+		<result property="reviewerFile.filePath" column="RPTGAD_RUTAIMG_FIRMAJSB"/>		
+		<result property="reviewerFile.fileName" column="RPTGAD_IMG_FIRMAJSB"/>			
+		<result property="appraisee.activeRank" column="RPTGAD_ACTIVE_RANK_TC"/>
+		<result property="reviewerComments" column="RPTGAD_OBS_JSB"/>
+		<result property="airlineCode" column="LNAR_CDG_IATA"/>	
+		<result property="appraiseeComments" column="RPTGAD_OBS_TC"/>	
+		<result property="type.code" column="TPOGAD_CDG"/>
+		<result property="type.typeGadDescription" column="TIPMAT_CDG"/>
+		<result property="tabletCode" column="RPTGAD_CDG_TABLET"/>
+		<result property="status.code" column="EDORPT_CDG"/>	
+		<result property="errorMsg" column="RPTGAD_MENS"/>
+		<result property="creationDate" column="RPTGAD_FCH_CREACION"/>
+		<result property="flightDate" column="VLOS_FCH"/>
+		<result property="expirationDate" column="RPTGAD_FCH_EXPIRA_EDO"/>
+		<result property="strengths" column="RPTGAD_DSC_FORTALEZA"/>
+		<result property="improvements" column="RPTGAD_DSC_MEJORA"/>
+	</resultMap>
+	
+	<select id="detailGcp" resultMap="ReportGCP4Detail">    	
+    	 SELECT 	distinct 
+    	            G.RPTGAD_SEQ_CDG,
+    				T.LNAR_CDG_IATA, 
+    	   			T.CDVL_NMR,
+    	   			T.TRIPLT_BP_JSB,  
+    	   			G.TRIPLT_BP_TC, 
+    	   			G.RPTGAD_RUTAIMG_FIRMA_TC,    
+					G.RPTGAD_IMG_FIRMATC,     
+					G.RPTGAD_RUTAIMG_FIRMAJSB,     
+					G.RPTGAD_IMG_FIRMAJSB,     
+					G.RPTGAD_ACTIVE_RANK_TC,    
+					G.RPTGAD_OBS_JSB,     
+					G.RPTGAD_OBS_TC,     
+					G.TPOGAD_CDG,     
+					TG.TIPMAT_CDG,
+					G.RPTGAD_CDG_TABLET,     
+					G.EDORPT_CDG,     
+					G.RPTGAD_MENS,    
+					G.RPTGAD_FCH_CREACION,     
+					G.RPTGAD_FCH_EXPIRA_EDO,
+					G.RPTGAD_DSC_MEJORA,
+                   	G.RPTGAD_DSC_FORTALEZA, 
+                   	G.RPTGAD_OBS_TC,
+					T.VLOS_FCH       
+		FROM 		RPTGAD G, TRMASG T, TPOGAD TG         
+		WHERE 		G.RPTGAD_SEQ_CDG = #{param1:VARCHAR}  AND TG.TPOGAD_CDG = G.TPOGAD_CDG 
+		AND EXISTS (	SELECT 1 
+						FROM TRMGAD RL
+					  	WHERE T.TRMASG_SEQ_CDG = RL.TRMASG_SEQ_CDG
+					  	AND RL.RPTGAD_SEQ_CDG = G.RPTGAD_SEQ_CDG)
+   </select> 
+
+
+	<resultMap 
+		id="EvaluationsGcp" type="com.latam.pax.nimbus.domain.AspectGcpEvaluated">
+		<id property="codeGcp" column="RPTGAD_SEQ_CDG"/>				
+		<id property="codeAspect" column="ASPGAD_CDG"/>
+		<result property="average" column="PUNTCN_CDG"/>
+		<result property="aspect" column="ASPGAD_DSC_ES"/>		
+		<result property="aspectPT" column="ASPGAD_DSC_PT"/>		
+		<result property="averageTotal" column="PUNTCN_VALOR"/>		
+		<result property="section" column="SECCIO_DSC_SECCION"/>
+		<result property="codeSection" column="SECCIO_CDG"/>	
+		<result property="phase" column="FASGCP_DSC_FASE"/>	
+		<result property="codePhase" column="FASGCP_CDG"/>			
+		<result property="typeQuestion" column="TIPPRE_DESC"/>				
+	</resultMap>
+	
+	<select id="getQuestionGCPAnswered" parameterType="String" resultMap="EvaluationsGcp">    	    		
+			 SELECT DISTINCT
+			 E.TPOGAD_CDG,
+			 E.RPTGAD_SEQ_CDG, 
+			 E.ASPGAD_CDG,
+			 D.ASPGAD_DSC_ES,
+			 D.ASPGAD_DSC_PT,             
+			 E.PUNTCN_CDG,
+             
+				 S.SECCIO_CDG,
+			     S.SECCIO_DSC_SECCION,
+                 F.FASGCP_CDG,
+			     F.FASGCP_DSC_FASE,
+			     D.TIPPRE_CDG,
+				 Q.TIPPRE_DESC,
+			 N.PUNTCN_VALOR,
+			 D.ASPGAD_CRR_PREGUNTA
+			 FROM 
+			 TRMGAD L 
+			 JOIN EVLCMP E ON E.RPTGAD_SEQ_CDG = L.RPTGAD_SEQ_CDG
+			 JOIN PUNTCN N ON E.PUNTCN_CDG     = N.PUNTCN_CDG
+			 JOIN ASPGAD D ON E.ASPGAD_CDG     = D.ASPGAD_CDG
+			 INNER JOIN RPTGAD P ON P.RPTGAD_SEQ_CDG = L.RPTGAD_SEQ_CDG
+			 JOIN SECCIO S ON S.SECCIO_CDG = D.SECCIO_CDG
+			 JOIN FASGCP F ON F.FASGCP_CDG = D.FASGCP_CDG 
+             JOIN TIPPRE Q ON Q.TIPPRE_CDG = D.TIPPRE_CDG 
+			 WHERE
+			 Rptgad_Rpt = 'GCP'
+			 AND P.TRIPLT_BP_TC = #{param1:VARCHAR}
+			 ORDER BY S.SECCIO_CDG,F.FASGCP_CDG,D.ASPGAD_CRR_PREGUNTA			 			      
+     
+   </select>
+   
+	<resultMap 
+		id="JSBMember"
+		type="com.latam.pax.nimbus.domain.CrewMember">
+		<id property="bp" column="TRIPLT_BP"/>				
+		<result property="firstName" column="TRIPLT_NMB_TRIP"/>
+		<result property="lastName" column="TRIPLT_APE_TRIP"/>
+		<result property="operator" column="TRIPLT_LNAR_CDG_IATA"/>		
+		<result property="headQuarters" column="TRIPLT_BASE"/>			
+		<result property="creationDate" column="TRIPLT_FCH_CREACION"/>
+		<result property="lastSyncDate" column="TRIPLT_FCH_ULT_SINC"/>
+   </resultMap> 
+   
+	<select id="getCrewByBp" resultMap="JSBMember" parameterType="com.latam.pax.nimbus.domain.CrewMember">    	
+    	SELECT TRIPLT_BP,
+			   TRIPLT_NMB_TRIP,
+			   TRIPLT_APE_TRIP,
+			   TRIPLT_LNAR_CDG_IATA,
+			   TRIPLT_BASE,
+			   TRIPLT_FCH_CREACION,
+			   TRIPLT_FCH_ULT_SINC
+		 FROM TRIPLT 
+		 WHERE TRIPLT_BP = #{bp}
+    </select>
+</mapper>

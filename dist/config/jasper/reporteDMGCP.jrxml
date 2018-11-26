@@ -1,0 +1,1597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteGCP" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="14bea6aa-1d96-42c7-b201-abe57e959581">
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="ireport.zoom" value="1.2100000000000422"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="598"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="94b4e3e2-eada-477c-9914-da4bfa91a5d4"/>
+	<parameter name="param.gcp.title" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["GUIA DE CONFIRMACION DE PROCESOS"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.flight" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Vuelo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.header" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.date" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="param.gcp.crewmembertitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Tripulante Evaluado"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.nametc" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Nombre"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.bp" class="java.lang.String">
+		<defaultValueExpression><![CDATA["BP"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.flightposition" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Posición en Vuelo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.namejsbtitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jefe Servicio a Bordo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.observaciones.jsb.title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Observaciones"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.observaciones.tc.title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Observaciones"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.table.competencia" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Competencia"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.table.detail" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Detalle"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.table.evaluacion" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Evaluación"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.firmajsb" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Firma JSB"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.firmatc" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Firma TC"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.flight" class="java.lang.String">
+		<defaultValueExpression><![CDATA["LA600"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.date" class="java.lang.String">
+		<defaultValueExpression><![CDATA["20-JUN-2013"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.nametc" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Juan Perez"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.bptc" class="java.lang.String">
+		<defaultValueExpression><![CDATA["9384023"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.flightposition" class="java.lang.String">
+		<defaultValueExpression><![CDATA["7"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.namejsb" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Cecilia Rodriguez"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.bpjsb" class="java.lang.String">
+		<defaultValueExpression><![CDATA["56456"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.observaciones.jsb" class="java.lang.String">
+		<defaultValueExpression><![CDATA["El tripulante bien evaluado, es muy amable con alto sentido por la responsabilidad. Estas cosas amenudo no suceden del todo bien, espero qe esta sea la excepción y se pueda mostrar la mejor versión posible dentro de los margenes establecidos."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.observaciones.tc" class="java.lang.String">
+		<defaultValueExpression><![CDATA["El tripulante bien evaluado, es muy amable con alto sentido por la responsabilidad. Estas cosas amenudo no suceden del todo bien, espero qe esta sea la excepción y se pueda mostrar la mejor versión posible dentro de los margenes establecidos."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.namejsb" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jefe Servicio a Bordo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.proceso.title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jefe Servicio a Bordo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.guia.title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jefe Servicio a Bordo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.preguntas.title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jefe Servicio a Bordo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.evaluacion.title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jefe Servicio a Bordo"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Orientación a Resultados"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Comunicación"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Resolución de Problemas y Mejora Continua"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp4" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Trabajo en Equipo y Colaboración"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp5" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manejo de Presión, Cambio y Contingencia"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp6" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Impacto en el Cliente"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp7" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Impacto en el Cliente"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp8" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp9" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp10" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp11" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp12" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp13" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp14" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp15" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp16" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp17" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp18" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp19" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp20" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp21" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp22" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.comp23" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Seguridad"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp1" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Cumple con las normas que regulan su cargo (imagen personal, uniformidad, tiempos y documentación necesaria)."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Planifica y organiza su trabajo según instrucciones de JSB."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Entrega información de manera amable, clara y oportuna en todo momento, mostrando consistencia en la comunicación verbal y no verbal."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp4" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Escucha activamente a JSB/TM, compañeros de trabajo, paxs y otras áreas, verificando su entendimiento."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp5" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Previene y/o resuelve problemas que pudiesen ocurrir, manteniendo informado a su jefatura en todo momento."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp6" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Se mantiene actualizado en las herramientas y conocimientos que requiere su cargo."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp7" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Colabora activamente con JSB/TM, compañeros de trabajo y otras áreas, respetando la diversidad del entorno y generando un ambiente positivo."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp8" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp9" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp10" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp11" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp12" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp13" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp14" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp15" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp16" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp17" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp18" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp19" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp20" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp21" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp22" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.asp23" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Es flexible a cambiar de opinión y abierto a la crítica, resolviendo conflictos de manera constructiva."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg4" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg5" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg6" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg7" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg8" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg9" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg10" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg11" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg12" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg13" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg14" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg15" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg16" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg17" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg18" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg19" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg20" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg21" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg22" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.tipopreg23" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota3" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota4" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota5" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota6" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota7" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota8" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota9" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota10" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota11" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota12" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota13" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota14" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota15" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota16" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota17" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota18" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota19" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota20" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota21" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota22" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.table.nota23" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.position" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.pos" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.question" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.total" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.point" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.segurity" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.atento" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.eficiencia" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.adhoc" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.section1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.section2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.section3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.section4" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.section5" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase4" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase5" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase6" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase7" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase8" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.phase9" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.puntaje" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.prom" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.aviso" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.question2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.total2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.gex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.adhoc" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.excep" class="java.lang.String">
+		<defaultValueExpression><![CDATA["testing"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DEFAULT_VALUE" class="java.lang.String">
+		<defaultValueExpression><![CDATA["-"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.mejoras.title" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["GUIA DE CONFIRMACION DE PROCESOS"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.fortalezas.title" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["GUIA DE CONFIRMACION DE PROCESOS"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="param.gcp.comentarios.title" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["GUIA DE CONFIRMACION DE PROCESOS"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="PRE_IFE_MSFAIL_IFEMSV" class="java.lang.String"/>
+	<parameter name="PRE_IFE_MSFAIL_IFEMSV_HEADER" class="java.util.Map"/>
+	<parameter name="PRE_IFE_MSFAIL_IFEMSV_LIST" class="java.util.List"/>
+	<parameter name="SUBREPORT_PRE_IFE_MSFAIL_IFEMSV" class="java.io.InputStream" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA[new FileInputStream("C:\\LAN-SOFT\\LATAMDomain\\app-config\\HGSAB-1.0\\jasper\\subreport3Cols.jasper")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="value.gcp.SingTC" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="value.gcp.SingJSB" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="value.gcp.table.nota1" class="java.lang.String"/>
+	<parameter name="value.gcp.phase10" class="java.lang.String"/>
+	<parameter name="value.gcp.tipo.gad" class="java.lang.String"/>
+	<field name="field1" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42">
+			<textField>
+				<reportElement uuid="5af22afe-31c2-4596-98b4-e8e757778cec" x="0" y="0" width="338" height="35"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ee07e39b-15ab-46ed-8c38-2ed8d976d6b6" x="351" y="0" width="207" height="35"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipo.gad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="103" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="1efa5532-d1b2-47e6-a105-aedc35092923" x="275" y="10" width="280" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f547f728-321b-45b8-ae4d-cfc351d04ea2" x="0" y="10" width="275" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="7c1fb299-9ad5-48b3-ad46-1b5c0c9f6274" x="10" y="10" width="31" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.flight}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="80bc78dd-778f-4d41-909c-1240c67ab5f1" x="286" y="10" width="41" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="971324c9-86c5-4d3e-b6cb-0a96c1b30ad9" x="47" y="10" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.flight}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="d12be11a-8d33-4456-a0fe-2144772be5e6" x="327" y="10" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.date}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="18ce5a19-90fc-4f61-a6e0-104edc9087f9" x="0" y="77" width="555" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="ba9638e0-da8c-4a17-87cf-fe6ead76e2ee" x="0" y="37" width="555" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="87cb55cb-9533-4d76-84a8-288400742d1b" x="0" y="57" width="555" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="ace2b6a0-7aa0-4347-8149-224210b07f7e" stretchType="RelativeToTallestObject" x="9" y="57" width="109" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.flightposition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8c72978c-837a-413d-add2-eab13bc13e9c" x="9" y="37" width="109" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.nametc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0462e64d-1541-437f-892b-ea18dd8c0869" x="118" y="37" width="201" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.nametc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1245afe0-460c-4cf1-be88-e038a58a5886" x="118" y="57" width="201" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.flightposition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2e04878f-6e0c-4c6b-a312-63dd6f53bc24" x="118" y="77" width="202" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.namejsb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="35a08aed-8738-4cb6-a257-2aae4f38e992" x="10" y="77" width="108" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.namejsb}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="623" splitType="Immediate">
+			<rectangle>
+				<reportElement uuid="1d08892f-be78-4b7c-80ce-1ff7c31669da" x="490" y="506" width="65" height="76"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="03581355-3678-436d-9d04-23cb4291421d" x="446" y="506" width="44" height="76"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="9fae587f-2418-4f76-9818-f25d8c896df9" x="155" y="506" width="291" height="76"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="effccc3e-ccff-4eb2-8b17-f4b7bc0772fc" x="0" y="53" width="101" height="128"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="403bf07c-0288-4b40-a3cb-5b0f6eae790e" x="155" y="445" width="291" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e18d0298-6030-44b3-8d33-2a0f0a33f79e" x="101" y="364" width="55" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="bb17a378-0d76-45a1-9b0a-8520f52276fd" x="0" y="303" width="101" height="122"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="efd41b7a-bd2e-480a-a36f-d2f704b827a3" x="490" y="53" width="65" height="67"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="dff5656d-2a53-47f2-85ae-e43bfef1b334" x="155" y="53" width="291" height="67"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4709fc5a-1c0d-40f2-84bf-0c144eb0414d" x="446" y="53" width="44" height="67"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="546b516a-e382-40ac-80da-092c7398d913" x="490" y="120" width="65" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c72752ce-4d48-4264-88db-9850e4f26d5e" x="155" y="120" width="291" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="000c0fbf-8b8d-48d1-a399-4fdf7fce9e1c" x="446" y="120" width="44" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="0f68ccb4-82f7-495d-81fc-fd38b06537a4" x="490" y="181" width="65" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="fed90a7b-03ce-4441-9fbf-3a97358be5b1" x="155" y="181" width="291" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="459d6320-4632-4daf-be14-283becfcdf87" x="446" y="181" width="44" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="55ba4e0b-2c49-45ce-a391-1485a453b540" x="489" y="242" width="66" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="a01a7357-3216-4d52-83c5-48b61a0f3216" x="155" y="242" width="291" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="85e534e9-1a18-4819-9e70-41d0b716225e" x="446" y="242" width="44" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="95378337-9606-4504-8b17-24433a265f23" x="489" y="303" width="66" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2495cd3e-795e-427d-80c5-b4187a77400c" x="446" y="364" width="44" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="363f55f5-b8d3-4eb5-a31f-05f873ca531e" x="0" y="13" width="101" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="0f851463-d0e6-4511-b38b-38b78fa8075e" x="101" y="13" width="54" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="de280b5b-d1a3-4b70-ab74-520d11d1cfb9" x="155" y="13" width="291" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2e980d85-4f8c-43f8-83c4-4b7530e81246" x="446" y="13" width="109" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="3bd44123-f92b-4b45-b7b2-626acf36dde6" x="2" y="14" width="99" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.proceso.title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f0003d08-fb06-4a7c-8f5f-2ab13dae5ea3" x="158" y="14" width="288" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.preguntas.title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7e8115eb-01f1-4c66-9ace-36b64d69c675" x="101" y="13" width="56" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.guia.title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0e66b6d7-74f0-43fe-b1a3-69dea62b45da" x="445" y="14" width="108" height="20"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.evaluacion.title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d33551e4-120e-4796-8e46-5fda2cbb91e7" x="167" y="120" width="272" height="61"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3a34f609-8997-4862-bb00-123cc6b4c855" x="167" y="181" width="272" height="61"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="63052e45-34d7-4aa5-9bb1-3f7a1550cece" x="167" y="242" width="272" height="61"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="53d5f3b6-586f-4d0b-8325-08ebed0ad69e" x="446" y="54" width="45" height="67"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1b9c229e-6af1-40db-bf79-7832e40b9377" x="446" y="121" width="47" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="42abf978-07c2-4f21-8a6e-ac4558bb7f5c" x="446" y="182" width="44" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="160655ed-be71-4d49-9383-07e706b9f0be" x="447" y="243" width="45" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9b90bcfe-bd1e-4be1-abf2-17a0a6dcf7fc" x="489" y="54" width="66" height="67"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e91fc496-a605-4d74-9a78-38247193baa9" x="491" y="120" width="66" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0c4c463f-b979-477e-8caf-29c44868047e" x="489" y="181" width="66" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2974f72d-3baf-4d35-9a5f-00a07b16e61e" x="491" y="242" width="64" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota4}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="eb75c566-7e0a-43cd-a67d-72f9a51f68b5" x="155" y="303" width="291" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="d9af5f11-f9be-457c-ad3d-75bafa7b9f1c" x="101" y="53" width="54" height="67"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="815d83d0-665b-4a13-89c4-4174e2c03a95" x="155" y="364" width="291" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1e4ea7ab-8616-4000-88c1-9b3433047de3" x="446" y="303" width="44" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="43f1400f-f851-4453-ba91-fd45d8a8bb01" x="490" y="364" width="65" height="61"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="43b96223-0e5b-4975-9374-09e3436e9fea" x="167" y="303" width="272" height="61"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7a6c6fa5-3cc3-4c66-b17e-6590c9f2a105" x="447" y="304" width="45" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="df063600-73d4-4748-bf5c-46e5600a630e" x="489" y="303" width="66" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="71200ff0-0033-4902-b5d4-e368902952bb" x="167" y="364" width="272" height="62"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp6}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="b069098f-d2de-43b7-bcca-00bed77377ab" x="0" y="33" width="555" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3fdfacd2-0906-4e69-ae2a-110a5f03d74a" x="101" y="120" width="54" height="61"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="4ffcf2bd-2aa2-44c9-a372-d45471b6c1b4" x="101" y="120" width="53" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg2}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="7b503a77-2b92-49da-bbbc-f90de2e90a10" x="0" y="181" width="101" height="122"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="467f0489-9e0e-49a9-894b-67168bd05cac" x="1" y="304" width="100" height="119"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6a9159d2-3da4-40cf-84a7-706c48893fa1" x="101" y="55" width="54" height="65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="10e48261-d1e0-484d-bf52-bdb287ce9deb" x="101" y="181" width="54" height="61"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="a63d3dbc-ff40-4ffd-b8af-dd180a8a7a5b" x="101" y="181" width="53" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg3}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="299a2af3-c9fa-4853-8026-adda76770f17" x="101" y="242" width="54" height="61"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="3f1e558c-8bab-46be-9b57-8b9f03d79bdf" x="101" y="242" width="54" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg4}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="2eafe9d1-399a-435f-ade6-6ea0cc873d64" x="101" y="303" width="54" height="61"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="86a161af-c0c5-4bda-a717-b3712efa8625" x="101" y="303" width="54" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0ecbca5b-4ad9-4690-ae12-cef45205c058" x="0" y="181" width="101" height="122"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1e6972cc-9348-4397-b01a-338221c7b688" x="101" y="365" width="53" height="60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg6}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="d89b0f49-9a5c-4a8d-b477-2d1a5879a905" x="101" y="445" width="54" height="61"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="5f035777-2f3e-4b4c-8959-58c05823d747" x="101" y="446" width="52" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d4016bb7-413b-4b1c-b208-f527e0ef3489" x="167" y="445" width="272" height="61"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp8}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="1406fec5-7978-409e-9bf6-87f9a18d7b7a" x="446" y="445" width="44" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="912f846e-e0db-42d3-8d50-672db0581fbe" x="490" y="445" width="65" height="61"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="94646fb4-b640-462f-9666-8b9bd924bb09" x="167" y="53" width="272" height="67"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="466626bd-5f56-4674-ab27-f4f64d413d18" x="447" y="362" width="45" height="61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a43bde17-5d84-430b-90a6-52f721a0ef73" x="446" y="444" width="43" height="62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="45049ad7-4b62-42ec-9806-e3048d52e2a8" x="493" y="364" width="62" height="62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="10784aec-dcc4-4a23-a38a-4daa421c2c15" x="489" y="445" width="65" height="62"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5b56ed41-c2b4-41e8-97dd-9cf6d5536af4" x="0" y="53" width="101" height="128"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2755bbae-ce80-4f07-8c25-6c32cfe27186" x="10" y="34" width="138" height="20"/>
+				<textElement>
+					<font size="10" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{value.gcp.section1}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="e76c854e-c8a0-4b15-8239-3cfa84d80a2d" x="0" y="425" width="555" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="3527b029-83fd-4897-b492-af66c2e557dd" x="9" y="426" width="142" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{value.gcp.section2}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="23fe42c7-3083-4bcb-8172-450f068b5655" x="0" y="445" width="101" height="137"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="896f9e78-a53f-465e-81c0-763e48f6de34" x="2" y="446" width="99" height="136"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2cfe99cb-f70e-4f8a-a0e4-2895a994adb7" x="489" y="506" width="65" height="76"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota9}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8d02b0aa-ea33-479e-8ea3-ba6217a42142" x="167" y="506" width="272" height="76"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp9}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1fe62436-2fca-4631-8cd2-0af0539e8ad6" x="446" y="505" width="43" height="77"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp9}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="06d0c192-b14b-4451-8e60-9103eb315f17" x="101" y="506" width="54" height="76"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="36e03aed-d2d5-414c-99b8-57f24f02549d" x="101" y="507" width="52" height="75"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg9}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<rectangle>
+				<reportElement uuid="6dacc8bc-ce20-484d-bc99-47fd6d8e70c6" x="490" y="737" width="65" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e4469ee3-da5d-454b-a35b-f1be45bdd50a" x="101" y="76" width="54" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4345fd31-2e64-436f-8291-3bfd8a9e670c" x="101" y="134" width="54" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="28d6a429-3c34-4843-b2c6-d146c0a58068" x="101" y="192" width="54" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5e78991d-7efc-4d57-a282-b7566e4ef40a" x="155" y="76" width="287" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="51511071-e1e2-41e9-8a44-3706143cc892" x="155" y="134" width="287" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="eb2c728a-bee6-4264-abc6-b17339891885" x="155" y="192" width="287" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3eb3dade-0e0d-4c78-a08c-a27bd7a4cac0" x="442" y="76" width="47" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4020e79b-e77b-41bf-8b3a-8176ad39cd86" x="442" y="134" width="47" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e2180b93-f973-4dfa-a5f4-868736542a27" x="442" y="192" width="47" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e51d69c2-7403-4c87-a701-8d253c0cfa72" x="489" y="76" width="66" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="be4fbea7-ab7a-4bbd-92af-46eeff0ded73" x="489" y="134" width="66" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="919fc28a-85d2-47a2-b21a-51a0c9f3f8b7" x="489" y="192" width="66" height="58"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="ee006456-c844-4ddf-b8f0-a8af5c7ea636" x="101" y="76" width="55" height="58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg11}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3d52d7a1-f554-4a6e-b789-f03cad4bd818" x="101" y="134" width="53" height="58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg12}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="eaea1513-54db-4d27-a36e-c255d9c57558" x="101" y="193" width="55" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg13}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3779048e-ac4e-4e7c-a07f-c4a7de5e24c4" x="167" y="76" width="269" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp11}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d21ee265-b28a-4d0c-9794-05fa75b2e224" x="167" y="135" width="269" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp12}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7145ffd1-0dc8-4ad6-bc75-ce3bb640753c" x="167" y="191" width="269" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp13}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cfe4b129-3c7d-4dc2-a8e5-4d52d38a6e87" x="442" y="76" width="45" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp11}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0e67948f-fe0f-4d72-90b6-32dc4fc44c8a" x="444" y="135" width="45" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp12}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c1c76e8f-3254-4ea4-bf49-5967bd392989" x="445" y="191" width="45" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp13}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="69ceb4f6-9c55-4a36-abf2-63da43c210b5" x="490" y="76" width="66" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota11}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5c06e0dc-6738-4f9c-a337-deb131e0bf8c" x="490" y="135" width="66" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota12}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f86ca245-cced-45ed-8d58-2c60c12b57c9" x="491" y="194" width="66" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota13}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="6811702b-a46c-4cd2-b8ec-3141ef1843c1" x="101" y="250" width="54" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="8dc057c1-5efe-4cac-8254-ef3110b25203" x="101" y="364" width="54" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="20f4e48c-d193-4969-ba51-663d72e6f0b0" x="101" y="422" width="54" height="60"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="b4f98113-2809-43d6-a2f8-a7ab3ca831a6" x="155" y="250" width="287" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="52bf591c-6757-4abb-9512-3d9fefbfe1d5" x="155" y="308" width="287" height="56"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="97475ae1-69a7-42ab-943c-7996327ee421" x="155" y="364" width="287" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1ffa059f-6290-464a-a656-9306bb55edab" x="155" y="422" width="287" height="60"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c4d0ea46-9d45-4cc1-9850-bbb74eb8d882" x="442" y="308" width="47" height="56"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="8a5d69f1-9d4a-4d45-8273-b7759116e778" x="442" y="364" width="48" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2ea6e363-d98f-41ea-9843-b342e4444df7" x="442" y="422" width="47" height="60"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2b60919c-bde7-4a67-ad83-f80601566d18" x="489" y="250" width="66" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="7ab5fc6c-cc4f-4d3c-add2-7c26421ed851" x="489" y="308" width="66" height="56"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="968f073f-9f0a-4f36-b896-7ecfd2bae514" x="489" y="364" width="66" height="58"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="634da737-90c2-41ef-8a1e-2be13b321e06" x="489" y="422" width="66" height="60"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="bcb73b43-fa68-4689-9bf9-e285e6e07d2a" x="101" y="251" width="55" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="80166e27-47f7-4100-b81a-6524e716742f" x="101" y="366" width="53" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg16}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="44c18e20-5612-4c0f-8f57-12e3faf6acfc" x="167" y="248" width="269" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9e210267-391a-4da1-9915-54ba0ff3bf70" x="167" y="308" width="269" height="55"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp15}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8fa469c6-b881-4254-b45e-82db73fb59ba" x="167" y="365" width="269" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp16}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="601883b9-8208-4526-b83b-ae45cbc3d38d" x="167" y="422" width="269" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp17}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ccb53c4e-1180-4b67-9db4-8070e058f316" x="443" y="252" width="45" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5f32651b-12e5-4584-bf17-641507598a66" x="444" y="308" width="42" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp17}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="82539c3e-d436-4175-92e9-ec288ee3db4f" x="444" y="364" width="46" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp16}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d7b27002-eedc-4a56-a0b2-8ed3f5b0d885" x="443" y="423" width="45" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp17}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8a77f60f-4b18-4f60-b631-047e61622ff3" x="490" y="251" width="66" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9b69d88f-7c42-46b9-b909-ca9d7046eeb3" x="490" y="309" width="66" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota15}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="25a593bf-d9cd-4eab-a19b-83fa413a7efa" x="488" y="366" width="66" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota16}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e945a40f-79fd-49a9-9fca-f44888c1c54e" x="489" y="425" width="66" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota17}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8bd0ce61-ac23-4146-846b-6238d5293674" x="101" y="423" width="53" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg17}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="5e9c20b4-44c7-41e9-8c72-83d1555f3d94" x="101" y="482" width="54" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="92ccb823-29ee-449d-ace3-40be25df12cc" x="101" y="621" width="54" height="50"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1582b04a-c545-4703-b7f0-e78531d48b81" x="101" y="671" width="54" height="66"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="fbdce15f-6b6f-4499-8257-e0b92b33e807" x="155" y="482" width="287" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="b039413b-583f-4cf4-93b3-2f39bf144d26" x="155" y="622" width="287" height="50"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="3d310f39-bb9d-4945-bdd4-729e1840a618" x="442" y="482" width="48" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="2f2d7053-2229-49ad-93a3-a0fe6e1e0460" x="442" y="621" width="48" height="50"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="1bb28986-4d0c-474e-a78f-934ba552e725" x="442" y="671" width="48" height="66"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="85a62ff0-1eab-41b3-b853-36643c2f0d5a" x="489" y="482" width="66" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="5d75ab02-46b2-4a66-be29-2b2c5bf55c4e" x="490" y="621" width="65" height="50"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="90a4bd44-ee28-4420-88ac-f4a16c6025ae" x="490" y="671" width="65" height="66"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="c0e639f0-9882-4f9e-802e-3caefce477f1" x="155" y="671" width="287" height="66"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="fe3e63ac-55b9-4857-988d-b5043266aabb" x="101" y="482" width="56" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg18}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="fa9702e6-80af-4036-91ae-37d3407eb57a" x="101" y="622" width="55" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg20}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b0279958-9b4e-4409-a5e2-1f1ccca11923" x="101" y="672" width="54" height="64"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg21}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8f60c63f-4c4d-4342-97f3-d0dabc7a53b2" x="167" y="482" width="271" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp18}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="003e94a7-2da7-452e-a4eb-0ffb50c914f4" x="169" y="622" width="269" height="49"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp20}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="22805f99-23ca-4f03-8fbf-7f4a8ac4943a" x="169" y="672" width="269" height="66"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp21}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a74d43e7-39c6-496c-95f8-8ac3f815ac82" x="444" y="484" width="43" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp18}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2c52e748-4c25-413c-b049-df758d99579e" x="445" y="622" width="45" height="49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp20}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="794d9548-7833-4bc1-98d6-1b7d87983d1a" x="444" y="671" width="45" height="65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp21}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="36961bb4-2bee-4498-96ce-8da92ae0fbbf" x="491" y="484" width="66" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota18}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="7b42f3a4-a906-417d-ba2e-1ba4f86ccb03" x="492" y="621" width="63" height="50"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota20}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3d773109-c02b-4dcb-a207-d82dbd683f7f" x="492" y="672" width="63" height="64"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota21}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="21b37c07-3c35-4e5c-ba6a-abd6764b0922" x="0" y="621" width="101" height="175"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="744df5a4-dde6-4129-91bf-3382e0135fde" x="2" y="621" width="99" height="175"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase8}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="a3845fc4-7fc2-4f42-a1f5-59076873e80a" x="0" y="600" width="555" height="22"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="047bb886-2b2e-4e6b-9a8c-bc4332d0fd15" x="10" y="601" width="157" height="22"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{value.gcp.section3}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="356e68be-c0f9-4103-8055-4772ec2a153c" x="101" y="308" width="54" height="56"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="fefbef9a-11c1-417b-80da-fa68edae72af" x="101" y="308" width="52" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg15}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="73d45771-e06d-477b-8d1d-3819faeec6d8" x="0" y="134" width="101" height="407"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="465916e1-050c-4035-a19a-036c60a0f7ad" x="2" y="135" width="99" height="404"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase6}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="68d53a55-bf87-4003-9fa6-ba9728955863" x="442" y="17" width="47" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="30b909b5-9b61-4499-a4d0-4458289a3982" x="155" y="17" width="287" height="59"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="de52afe5-51d7-4b70-96b9-b0ba8d4c4217" x="167" y="17" width="270" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp10}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="1aa7661d-a1dc-427d-878c-528f99a251be" x="489" y="17" width="66" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="cb4e2a30-f289-4bd9-8b39-d9b70e6d0522" x="101" y="17" width="54" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="f57e4bb9-1b4a-482a-9c68-15b901373edf" x="0" y="17" width="101" height="117"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="9d18ff19-04cf-4908-a30b-0b639ffd5e88" x="2" y="17" width="99" height="116"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="265d5b90-d9dd-41f2-a6a3-020fe1eb56e8" x="101" y="16" width="55" height="58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="29b11750-bd19-4024-8103-e622d14bdfc2" x="444" y="19" width="41" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d6ab330c-90d6-4a1c-9b03-cd003e5d1a69" x="492" y="17" width="61" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota10}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="312c936a-5afe-47a9-83d6-f18cf0e4bfec" x="155" y="541" width="287" height="60"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="572c2cbe-3193-4cb9-afe8-954bbfe16fe4" x="167" y="542" width="271" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp19}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="4293aa22-6155-44c8-b31a-74090d203714" x="489" y="541" width="66" height="60"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="fa2cd363-b6a0-4411-b9e3-336e7c89921e" x="492" y="543" width="64" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota19}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="65d50873-9eca-4f86-92fc-459dcdbed433" x="442" y="541" width="47" height="60"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="3bd66430-6bc9-4eda-b4d2-3a2b8963ad78" x="444" y="542" width="44" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp19}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="8d728c82-d848-48ce-8954-1f527874b01f" x="101" y="541" width="54" height="60"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="68e8adad-a58b-430e-9889-183085bb35d4" x="101" y="541" width="53" height="58"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg19}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="5295fdaa-6a87-42d3-a44b-5a78210acbb0" x="0" y="541" width="101" height="60"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="e5f90d57-7907-46ca-befd-55b03cc59ee1" x="1" y="544" width="100" height="54"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="59d96eb6-504e-46df-8cde-29e0005e8ea9" x="490" y="739" width="63" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota22}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="231">
+			<printWhenExpression><![CDATA[!$P{PRE_IFE_MSFAIL_IFEMSV_LIST}.isEmpty()]]></printWhenExpression>
+			<rectangle>
+				<reportElement uuid="0f847b0c-ee81-44fa-ae43-9ac9a28a04ff" x="1" y="21" width="555" height="22"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="a93cc965-f85c-4678-82b7-248ce9d398fe" x="101" y="-65" width="56" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="cc26912b-7ed8-4c87-a896-e94f3794d799" x="442" y="-65" width="48" height="59"/>
+			</rectangle>
+			<subreport isUsingCache="false">
+				<reportElement uuid="1f30758a-70ff-4671-aebd-12b2d0266445" stretchType="RelativeToTallestObject" x="9" y="163" width="522" height="47" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{PRE_IFE_MSFAIL_IFEMSV}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="DEFAULT_VALUE">
+					<subreportParameterExpression><![CDATA[$P{DEFAULT_VALUE}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="reportHeader">
+					<subreportParameterExpression><![CDATA[$P{PRE_IFE_MSFAIL_IFEMSV_HEADER}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{PRE_IFE_MSFAIL_IFEMSV_LIST})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_PRE_IFE_MSFAIL_IFEMSV}]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement uuid="247b080f-b94f-43bb-a053-68a1d120922d" x="366" y="119" width="98" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{param.gcp.puntaje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5002350c-e51a-4309-8d24-4d6524ec86c3" x="431" y="119" width="66" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{value.gcp.prom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b67959d2-27b5-4be0-baed-cba805ee27ae" x="101" y="-65" width="57" height="57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg22}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="8a5d0f46-7425-4904-ad8f-51c7c625686e" x="155" y="-65" width="287" height="59"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="7e6cbe74-0d12-4ccf-9518-48b9e207faac" x="169" y="-64" width="269" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp22}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2a636777-5419-42c9-90cf-6b8596968c53" x="445" y="-65" width="45" height="55"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp22}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="27e5baff-fb19-428a-bf45-33fba686f010" x="10" y="21" width="157" height="22"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{value.gcp.section4}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="fe1b8029-4a02-4936-a935-23f9cdb933f0" x="491" y="43" width="65" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="e8425f03-b63a-4d16-b125-1d0fb6b97384" x="445" y="43" width="48" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="ce277f1f-e6ff-4afb-b372-2b66b717d7eb" x="155" y="43" width="291" height="59"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="02a29e69-e570-408e-92d4-111a2d1c3b06" x="169" y="43" width="269" height="59"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.comp23}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="890c67a1-6610-4010-91f9-95bde52be3f0" x="101" y="43" width="54" height="59"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="304f71c2-846e-4f23-8171-932200f87bcc" x="1" y="43" width="100" height="59"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="799ee56a-e57a-4edf-bf91-3262fd344fa5" x="447" y="43" width="45" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.asp23}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="aec7962c-f6d5-4236-92a8-d4cd05e4390b" x="493" y="43" width="61" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.table.nota23}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a3d17773-be12-486f-aa6a-4bda64150078" x="101" y="43" width="52" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.tipopreg23}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b4deef43-4198-42d5-9e47-2076aa3b2b23" x="2" y="43" width="99" height="59"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{value.gcp.phase9}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="502">
+			<textField>
+				<reportElement uuid="5a1668b7-15ee-4f5e-aa87-8a507fe035a0" x="42" y="13" width="191" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.fortalezas.title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="513e1327-850b-4d3b-b072-20a060e83f16" stretchType="RelativeToTallestObject" x="42" y="33" width="201" height="92"/>
+				<box leftPadding="10">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{value.gcp.observaciones.jsb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="24df5031-4a3e-4ba5-b4af-89954be4eb56" x="82" y="399" width="174" height="20"/>
+				<box topPadding="0">
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.firmajsb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ef53ac80-2c3e-4716-8fcc-b080fda70cd1" x="351" y="399" width="159" height="20"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.firmatc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e4873c4a-7074-4bb6-a946-b57985fe49de" stretchType="RelativeToTallestObject" x="309" y="33" width="201" height="92"/>
+				<box leftPadding="10">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{value.gcp.observaciones.tc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="28fa484a-4fcf-4db0-af22-dce9e2f5cb4b" x="309" y="13" width="191" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{param.gcp.mejoras.title}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="5423490d-bbd0-42ff-a1e4-507c069e0963" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="83" y="317" width="200" height="78"/>
+				<imageExpression><![CDATA[$P{value.gcp.SingJSB}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="5ce78e18-434f-4905-a572-78ca3b8fd91f" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="350" y="316" width="200" height="78"/>
+				<imageExpression><![CDATA[$P{value.gcp.SingTC}]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement uuid="59f98cac-dc67-4185-bd30-7e92a9ed7ac3" x="42" y="184" width="468" height="102"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="8e68faf9-0fb3-4a8e-9653-5d668b28d6af" x="64" y="184" width="446" height="102"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{param.gcp.observaciones.jsb.title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ecb845f6-4e44-45ce-8aff-ab01da76e7ae" x="42" y="164" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{param.gcp.comentarios.title}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
