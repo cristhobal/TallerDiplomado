@@ -7,10 +7,13 @@
 </head>
 <body>
     <table align="center">
+    	<tr>
+    	<td>  </td>
+    	</tr>
         <tr>
-            <td><a href="login">Login</a>
+            <td><a href="login">Teacher Access</a>
             </td>
-            <td><a href="register">Register</a>
+            <td><a href="showUser">Students Access</a>
             </td>
         </tr>
     </table>

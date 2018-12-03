@@ -12,6 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import cl.udechile.diplomado.tallerdeproyectos.dao.UserDao;
 import cl.udechile.diplomado.tallerdeproyectos.model.Login;
+import cl.udechile.diplomado.tallerdeproyectos.model.Texto;
 import cl.udechile.diplomado.tallerdeproyectos.model.User;
 
 /**
@@ -40,6 +41,28 @@ public class UserDaoImpl implements UserDao {
 		  return users.size() > 0 ? users.get(0) : null;
 	    
 	  }
+	  public void registerText(Texto txt) {
+		  
+		    String sql = "insert into texto values(?,?,?)";
+		    
+		    jdbcTemplate.update(sql, new Object[] { txt.getTexto(),txt.getTexto2(),txt.getUsername() });
+		  }
+	  public Texto mostrarTexto(Login login) {
+		  
+		  String sql = "select * from texto where username='" + login.getUsername() + "'";
+		  List<Texto> txts = jdbcTemplate.query(sql, new textoMapper());
+	    
+		  return txts.size() > 0 ? txts.get(txts.size() - 1) : null;
+	    
+	  }
+	  public List<User> mostrarUser(User user) {
+		  
+		  String sql = "select * from users";
+		  List<User> users = jdbcTemplate.query(sql, new UserMapper());
+	    
+		  return users.size() > 0 ? users : null;
+	    
+	  }
 }
 
 class UserMapper implements RowMapper<User> {
@@ -59,3 +82,15 @@ class UserMapper implements RowMapper<User> {
 	}
 }
 
+class textoMapper implements RowMapper<Texto> {
+	public Texto mapRow(ResultSet rs, int arg1) throws SQLException {
+		
+		Texto txt = new Texto();
+		
+		txt.setTexto(rs.getString("texto"));
+		txt.setTexto2(rs.getString("texto2"));
+		txt.setUsername(rs.getString("username"));
+		
+		return txt;
+	}
+}
