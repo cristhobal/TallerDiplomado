@@ -10,8 +10,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http:
     </bean>
     <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/myusers" />
+        <property name="url" value="jdbc:mysql://18.224.228.74:3306/taller" />
         <property name="username" value="root" />
-        <property name="password" value="" />
+        <property name="password" value="12345678" />
     </bean>
 </beans>
