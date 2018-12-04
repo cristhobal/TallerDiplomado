@@ -16,6 +16,10 @@
             <td><a href="showUser">Students Access</a>
             </td>
         </tr>
+        <tr>
+            <td><a href="register">register Teacher</a>
+            </td>
+        </tr>
     </table>
 </body>
 </html>
