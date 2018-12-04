@@ -13,7 +13,7 @@
         <tr>
             <td><a href="login">Teacher Access</a>
             </td>
-            <td><a href="showUser">Students Access-modiffi</a>
+            <td><a href="showUser">Students Access</a>
             </td>
         </tr>
     </table>
