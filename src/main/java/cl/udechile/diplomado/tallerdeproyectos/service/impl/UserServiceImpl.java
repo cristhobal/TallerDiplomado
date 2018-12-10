@@ -17,7 +17,7 @@ import cl.udechile.diplomado.tallerdeproyectos.model.User;
 
 /**
  * @author wiriarte
- *
+ * lunes 10 de diciembre
  */
 @Service
 public class UserServiceImpl implements UserService{
